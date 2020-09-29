@@ -4,7 +4,12 @@ namespace MineSweeper
 {
     public class SweeperGrid
     {
-        public int[,] grid = new int[15, 15];
+        public enum state
+        {
+            mine,
+            empty
+        }
+        public state[,] grid = new state[15, 15];
         static Random generator = new Random();
 
         public SweeperGrid()
